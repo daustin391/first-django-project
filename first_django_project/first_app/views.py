@@ -1,4 +1,4 @@
-from django.shortcuts import render, HttpResponse
+from django.shortcuts import render, HttpResponse, redirect
 
 
 def index(request):
@@ -10,7 +10,7 @@ def new(request):
 
 
 def create(request):
-    return index(request)
+    return redirect("/")
 
 
 def show(request, number):
@@ -22,4 +22,4 @@ def edit(request, number):
 
 
 def destroy(request, number):
-    return index(request)
+    return redirect("/")
