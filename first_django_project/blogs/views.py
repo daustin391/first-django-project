@@ -1,4 +1,4 @@
-from django.shortcuts import render, HttpResponse, redirect
+from django.shortcuts import HttpResponse, redirect
 
 
 def index(request):
@@ -22,4 +22,5 @@ def edit(request, number):
 
 
 def destroy(request, number):
+    print(f"this route would delete blog #{number}")
     return redirect("/blogs")
