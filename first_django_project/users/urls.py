@@ -1,7 +1,8 @@
-from django.urls import path
+from django.urls import path, include
 from . import views
 
 urlpatterns = [
+    path("", include("blogs.urls")),
     path("register", views.register),
     path("login", views.login),
     path("users/new", views.register),
